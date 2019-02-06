@@ -1,0 +1,10 @@
+body{
+    text-align: center;
+    background-color: #ccc;
+}
+
+canvas {
+    touch-action: none;
+    background-color: #fff;
+    
+}

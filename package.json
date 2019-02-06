@@ -1,0 +1,25 @@
+{
+  "name": "MandalaMagic",
+  "version": "1.0.0",
+  "description": "## Background Sanskrit for “circle”, mandalas are circlular symbols used as objects of devotion in Hindu and Buddhist practice. The construction of these symbols is extremely precise, with radial symmetry being of the utmost importance. This mandala generator allows for simple construction of the symbols by taking advantage of modern programming and radial symmetry.  The generator works by dividing a circle into a set number of regions, with a drawing in any one of these regions being replicated in the rest, creating a patterned symmetrical circle.",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "webpack": "webpack --mode=development --watch"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/elibretti/MandalaMagic.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/elibretti/MandalaMagic/issues"
+  },
+  "homepage": "https://github.com/elibretti/MandalaMagic#readme",
+  "dependencies": {
+    "webpack": "^4.29.2",
+    "webpack-cli": "^3.2.3"
+  }
+}
