@@ -20,7 +20,7 @@ In addition, the project will include
 ## Wireframes
 The app will contain the canvas area where the user draws directly in the middle of the page. Above the canvas area there will be a title with personal links below. To the left will be the majority of user controls, while the clear and download controls are located below th canvas. The right will contain the history of mandalas and the mathematical concepts behind the app.
 
-
+![wireframe](wire_frame.jpg)
 
 https://github.com/elibretti/MandalaMagic/blob/master/WireFrame/JS%20Project%20Proposal.jpg
 
