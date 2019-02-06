@@ -22,9 +22,6 @@ The app will contain the canvas area where the user draws directly in the middle
 
 ![wireframe](wire_frame.jpg)
 
-https://github.com/elibretti/MandalaMagic/blob/master/WireFrame/JS%20Project%20Proposal.jpg
-
-
 
 ## Architecture and Technologies
 The project will be built with the following technologies:
