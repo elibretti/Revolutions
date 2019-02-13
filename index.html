@@ -10,17 +10,30 @@
     <script src="./lib/bundle.js"></script>
 </head>
 <body>
-    <div class="twinkling"></div>
-    <div id="fog"></div>
+   <div class="welcome"> 
+        <div class="header">
+                <h1>Retro</h1>
+                <h2>Revolutions</h2>
+        </div>
+        <div class="instructions">
+                <p> Click the canvas to </p>
+                <p> start a </p>
+                <h2>Revolution!</h2>
+        </div>
+   </div>
     <div class="inputs-container">
     <div class="inputs">  
         <h1> Get Groovy!</h1>
         <label>
-        Color
+         Pen Color
         </label>
-            <input type="color" id="color" 
-            value="#eb4a2c">
-        
+            <input type="color" id="pen-color" 
+            value="#ffffff"> 
+        <label>
+                Background Color
+                </label>
+                    <input type="color" id="background-color" 
+                    value="#64013E">                     
         <label>
             Pen Size
         </label>
@@ -32,7 +45,7 @@
             Divisions
         </label>
             <input type = "number" id="divisions"
-                min="1" max="50" value="16" /> 
+                min="1" max="100" value="40" /> 
         <button id="mirror">
                 <span>Mirror</span>
         </button>
