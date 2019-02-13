@@ -4,53 +4,70 @@
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>Page Title</title>
-    <link href="https://fonts.googleapis.com/css?family=Orbitron" rel="stylesheet">   
-     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://fonts.googleapis.com/css?family=Ultra" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" type="text/css" media="screen" href="./assets/main.css" />
     <script src="./lib/bundle.js"></script>
 </head>
 <body>
-    <div class="stars"></div>
     <div class="twinkling"></div>
+    <div id="fog"></div>
+    <div class="inputs-container">
     <div class="inputs">  
+        <h1> Get Groovy!</h1>
         <label>
         Color
         </label>
             <input type="color" id="color" 
-            value="#64a2d4">
+            value="#eb4a2c">
         
         <label>
             Pen Size
         </label>
             <input type="range" id="pen-width" 
-                min="1" max="20"
-                value = "3"/>
+                min="1" max="10"
+                value = "2"/>
         
         <label>
             Divisions
         </label>
             <input type = "number" id="divisions"
-                min="1" max="50" value="10" /> 
-       
+                min="1" max="50" value="16" /> 
+        <button id="mirror">
+                <span>Mirror</span>
+        </button>
+        <button id="polygon-mode">
+                <div>
+                Polygon <br>
+                Mode
+                </div>
+        </button>
+        <button id="clear">
+           <span>Clear</span>
+        </button>
+        <div class="links">
+        
+                <a href="https://www.linkedin.com/in/elizabeth-libretti-350097b0/" id="linkedin">
+                    <img src="./assets/linkedin.png" >
+                </a>
+                <a href="https://github.com/elibretti" id="git">
+                    <img src="./assets/github.png" >
+                </a>
+                <a href="https://elizabethlibretti.wixsite.com/info" id="site">
+                    <img src="./assets/site2.png">
+                </a>
+        </div>
     </div>
-    <div class="canvas-container">
-        <h1>Mandala Magic</h1>
-        <canvas width="450" height="450" id="main-canvas">
-        </canvas>
-        <button id="clear">Clear</button>
     </div>
-
-    <div class="links">
-        <a href="https://www.linkedin.com/in/elizabeth-libretti-350097b0/" id="linkedin">
-            <img src="./assets/linkedin.png" >
-        </a>
-        <a href="https://github.com/elibretti" id="git">
-            <img src="./assets/github.png" >
-        </a>
-        <a href="" id="site">
-            <img src="./assets/site2.png">
-        </a>
+        <div class="canvas-container">
+            <canvas width="1500" height="1000" id="main-canvas">
+            </canvas>
+         </div>
+    <div class="header-container">
+        <div class="header">
+                <h1>Retro</h1>
+                <h2>Revolutions</h2>
+        </div>
     </div>
-   
 </body>
 </html>
