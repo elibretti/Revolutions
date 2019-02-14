@@ -1,48 +1,29 @@
 body{
     text-align: center;
-    /* background-image: url('./sand.jpg'); */
     display: flex;
     justify-content: center;
     font-family: 'Ultra', serif;
     font-weight: 200;
     background-position: 50%;
-    /* background-repeat: no-repeat;
-    background-size: cover; */
     overflow: hidden;
     z-index: 0;
-
-
-
 }
 
 canvas {
-    /* position: absolute;
-    touch-action: none;
-    background-color: rgba(228, 200, 153, .9);
-    /* padding: 50px; */
-    /* border-radius: 3px;
-    width: 100%;
-    height: 100%;  */
     margin-left: 325px;
     top: -10%;
     left: -25%;
     position: absolute;
     z-index: 1;
-
-    background-color: #64013E;
-    /* background: -webkit-radial-gradient(center, ellipse cover, rgba(255,255,255,1) 20%, rgba(246,246,246,0.53) 90%, rgba(237,237,237,0) 100%); */
- 
-
+    background-color: #64013E; 
 }
 
  .inputs{
     z-index: 4;
-    /* margin-left: 250px; */
     padding: 0px 30px;
     float: left;
     display: flex;
     flex-direction: column;
-    /* justify-content: center; */
     align-items: center;
     height: 100%;
     background: none;
@@ -56,30 +37,12 @@ canvas {
     z-index: 3;
     margin: 0;
     width: 375px;
-    /* border-right: 5px solid black; */
     background: radial-gradient(circle farthest-side, #fceabb, #f8b500);
     background-repeat: no-repeat;
     left: -10px;
     top: -10px;
 }
 
-
-/* .content-container{
-    z-index: 3;
-    display: flex; 
-    align-items: center;
-    flex-direction: column;
-} */
-/* .canvas-container{
-    background-image: url(./square-frame.png);
-    background-repeat: no-repeat;
-    background-size: cover;
-    overflow: hidden;    
-    height: 100%;
-    width: 100%;
-    border-radius: 2px;
-    margin: auto;
-} */
 
 label{
     margin-top: 20px;
@@ -108,12 +71,7 @@ label{
     top:30px;
 
 }
-/* .buttons{
-    z-index: 3;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-} */
+
 button{
     min-height: 50px;
     min-width: 100px;
@@ -157,7 +115,6 @@ button span, button div {
     z-index: 4;
     float: right;
     width: 375px;
-    /* border-left: 5px solid black; */
     background: #FCB043;
     position: relative;
     right: -10px;
@@ -168,9 +125,6 @@ button span, button div {
     float: right;
     height: 100%;
     width: 92%;
-    
-    /* display: flex;
-    justify-content: center; */
     writing-mode: vertical-lr;
     text-orientation: upright;
     background: radial-gradient(circle farthest-side, #fceabb, #f8b500);
@@ -225,7 +179,7 @@ button span, button div {
     left: -34%;
     top: 20%;
     animation: rotateShrink 3s, fade 3s forwards; 
-    animation-delay: 3s;
+    animation-delay: 1.7s;
 
 }
 .welcome .instructions{
