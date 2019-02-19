@@ -8,7 +8,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" type="text/css" media="screen" href="./assets/main.css" />
     <script src="./lib/bundle.js"></script>
+    <script src="jscolor.js"></script>
 </head>
+    <script>
+        function handleBackground(jscolor) {
+        document.querySelector("canvas").setAttribute('style',
+        `background-color: #${jscolor}`)
+    }
+    </script>
 <body>
    <div class="welcome"> 
         <div class="header">
@@ -25,15 +32,18 @@
     <div class="inputs">  
         <h1> Get Groovy!</h1>
         <label>
-         Pen Color
+            Pen Color
         </label>
-            <input type="color" id="pen-color" 
-            value="#ffffff"> 
+        <button
+            class="jscolor {valueElement:null, value:'ffffff'}"
+            style="width:50px; height:20px;"
+            id="pen-color" ></button>
         <label>
-                Background Color
-                </label>
-                    <input type="color" id="background-color" 
-                    value="#64013E">                     
+            Background Color
+        </label>
+        <button
+        class="jscolor {valueElement:null, value:'64013E', onFineChange:'handleBackground(this)'}"
+        id="background-color" ></button>                
         <label>
             Pen Size
         </label>
@@ -49,12 +59,12 @@
         <button id="mirror">
                 <span>Mirror</span>
         </button>
-        <button id="polygon-mode">
-                <div>
-                Polygon <br>
-                Mode
-                </div>
-        </button>
+
+        <label class="switch">
+                <input type="checkbox" id="polygon-mode">
+                <span class="slider round"></span>
+        </label>
+
         <button id="clear">
            <span>Clear</span>
         </button>
@@ -66,7 +76,7 @@
                 <a href="https://github.com/elibretti" id="git">
                     <img src="./assets/github.png" >
                 </a>
-                <a href="https://elizabethlibretti.wixsite.com/info" id="site">
+                <a href="https://elibretti.github.io/" id="site">
                     <img src="./assets/site2.png">
                 </a>
         </div>
