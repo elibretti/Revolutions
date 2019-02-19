@@ -92,6 +92,9 @@ button span, button div {
     border: 1px solid black;
 
 }
+.polygon{
+    margin-top:20px;
+}
 
 #clear{
     background-image: url('./button-1.jpg');
@@ -104,11 +107,7 @@ button span, button div {
     background-position-y: 50%; 
 }
 
-#polygon-mode{
-    padding: 10px;
-    background-image: url('./button-2.jpg');
-    background-size: 150%;
-}
+
 
 #background-color, #pen-color{
     margin-top: 5px;
@@ -217,6 +216,7 @@ button span, button div {
 }
 
 .switch {
+    margin-top: 0;
     position: relative;
     display: inline-block;
     width: 60px;
@@ -256,12 +256,10 @@ button span, button div {
   }
   
   input:checked + .slider {
-    background-color: #EB4A2C;
+    background-color: #64013E;
   }
   
-  input:focus + .slider {
-    box-shadow: 0 0 1px #EB4A2C;
-  }
+
   
   input:checked + .slider:before {
     -webkit-transform: translateX(26px);
