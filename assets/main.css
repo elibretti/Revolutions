@@ -7,13 +7,10 @@ body{
     background-position: 50%;
     overflow: hidden;
     z-index: 0;
+    margin: 0;
 }
 
 #main-canvas {
-    margin-left: 325px;
-    top: -10%;
-    left: -25%;
-    position: absolute;
     z-index: 1;
     background-color: #64013E; 
 }
@@ -33,14 +30,11 @@ body{
 
 
 .inputs-container{
-    position: relative;
     z-index: 3;
     margin: 0;
     width: 375px;
     background: radial-gradient(circle farthest-side, #fceabb, #f8b500);
     background-repeat: no-repeat;
-    left: -10px;
-    top: -10px;
 }
 
 
@@ -116,15 +110,10 @@ button span, button div {
 }
 .header-container{
     height: 1000px;
-    margin-left: 1000px;
     z-index: 4;
     float: right;
     width: 375px;
     background: #FCB043;
-    position: relative;
-    right: -10px;
-    top: -10px;
-
 }
 .header{
     float: right;
@@ -163,7 +152,6 @@ button span, button div {
 
 .welcome {
     position: absolute;
-    top: -10px;
     width: 100%;
     height: 110%; 
     z-index: 20;
