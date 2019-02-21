@@ -1,7 +1,7 @@
 body{
     text-align: center;
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     font-family: 'Ultra', serif;
     font-weight: 200;
     background-position: 50%;
@@ -11,8 +11,9 @@ body{
 }
 
 #main-canvas {
-    z-index: 1;
-    background-color: #64013E; 
+    position: absolute;
+    left: 11%;
+    background-color: #64013E;
 }
 
  .inputs{
@@ -118,20 +119,21 @@ button span, button div {
 .header{
     float: right;
     height: 100%;
-    width: 92%;
     writing-mode: vertical-lr;
     text-orientation: upright;
     background: radial-gradient(circle farthest-side, #fceabb, #f8b500);
     background-repeat: no-repeat;
-    padding: 30px 15px 0 0;
+    padding: 30px 0 0 0;
+    width: 100%;
     color: black;
+    margin: 0;
 }
 .header h1{
     text-align: start;
-    margin: 15px 0 ;
-    padding:0;
+    margin: 15px 0;
+    padding: 0;
     font-size: 55px;
-    
+    margin-left: 85px;
 
 }
 .header h2{
