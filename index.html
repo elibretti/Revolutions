@@ -4,9 +4,12 @@
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>Retro Revolutions</title>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.12/css/all.css" integrity="sha384-G0fIWCsCzJIMAVNQPfjH08cyYaUtMwjJwqiRKxxE/rx96Uroj1BtIQ6MLJuheaO9" crossorigin="anonymous">
+
     <link href="https://fonts.googleapis.com/css?family=Ultra" rel="stylesheet">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" type="text/css" media="screen" href="./assets/main.css" />
+    <link rel="stylesheet" type="text/css" media="screen" href="./assets/reset.css" />
     <script src="./lib/bundle.js"></script>
     <script src="jscolor.js"></script>
 </head>
@@ -14,7 +17,7 @@
         function handleBackground(jscolor) {
         document.querySelector("canvas").setAttribute('style',
         `background-color: #${jscolor}`)
-    }
+        }
     </script>
 <body>
    <div class="welcome"> 
@@ -56,9 +59,13 @@
         </label>
             <input type = "number" id="divisions"
                 min="1" max="100" value="40" /> 
-        <button id="mirror">
-                <span>Mirror</span>
-        </button>
+        <div class="mirror">
+                Mirror Mode 
+                <label class="switch">
+                        <input type="checkbox" id="mirror">
+                        <span class="slider round"></span>
+                </label>
+        </div>
         <div class="polygon">
             Polygon Mode 
             <label class="switch">
@@ -72,27 +79,20 @@
         </button>
         <div class="links">
         
-                <a href="https://www.linkedin.com/in/elizabeth-libretti-350097b0/" id="linkedin">
-                    <img src="./assets/linkedin.png" >
-                </a>
+                <a href="https://www.linkedin.com/in/elizabeth-libretti-350097b0/" id="linkedin"><i class="fab fa-linkedin"></i></a>
                 <a href="https://github.com/elibretti" id="git">
-                    <img src="./assets/github.png" >
+                    <i class="fab fa-github"></i></a>
                 </a>
                 <a href="https://elibretti.github.io/" id="site">
-                    <img src="./assets/site2.png">
+                    <i class="fas fa-user-circle"></i>                
                 </a>
         </div>
     </div>
     </div>
-        <div class="canvas-container">
-            <canvas width="1500" height="1000" id="main-canvas">
+        <div class="canvas-container" >
+            <canvas  id="main-canvas">
             </canvas>
          </div>
-    <div class="header-container">
-        <div class="header">
-                <h1>Retro</h1>
-                <h2>Revolutions</h2>
-        </div>
-    </div>
+
 </body>
 </html>

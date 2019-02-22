@@ -8,11 +8,13 @@ body{
     overflow: hidden;
     z-index: 0;
     margin: 0;
+    height: 100%;
 }
 
 #main-canvas {
     position: absolute;
-    left: 11%;
+    top: 0;
+    left: 15%;
     background-color: #64013E;
 }
 
@@ -27,20 +29,28 @@ body{
     background: none;
  }
 
+ .inputs h1{
+     font-size: 1.5em;
+     margin-bottom: 20px;
+ }
+
     
 
 
 .inputs-container{
     z-index: 3;
     margin: 0;
-    width: 375px;
+    width: 15%;
+    min-width: 210px;;
     background: radial-gradient(circle farthest-side, #fceabb, #f8b500);
     background-repeat: no-repeat;
+    height: 100%;
+    font-size: .6em;
+
 }
 
-
-label{
-    margin-top: 20px;
+input {
+    margin-bottom: 20px;
 }
 
 .links {
@@ -51,21 +61,24 @@ label{
     align-items: center;
 }
 
-
-.links a{
-    height: 50px; 
-    width: 50px;
-    border-radius: 50%;
-    overflow: hidden;
-    background: white;
+.links{
+    margin: 24px 0;
+    padding: 0;
+    font-size: 40px;
+    text-shadow: 0px 1px 2px rgba(0, 0, 0, .8);
 }
-.links a img {
-    max-height: 50px;
-    max-width: 50px;
-    border-radius: 50%;
-    top:30px;
 
+.links i {
+    color: black;
 }
+.links i:hover {
+    color: white;
+}
+
+#git, #site {
+    margin-left: 15px;
+}
+
 
 button{
     min-height: 50px;
@@ -77,7 +90,7 @@ button{
     border-radius: 5px;
     font-family: 'Ultra', serif;
     color: black;
-    font-size: 18px;
+    font-size: 1em;
     overflow: hidden;
 }
 
@@ -87,7 +100,7 @@ button span, button div {
     border: 1px solid black;
 
 }
-.polygon{
+.polygon, .mirror{
     margin-top:20px;
 }
 
@@ -96,11 +109,6 @@ button span, button div {
     background-size: cover;
 }
 
-#mirror{
-    background-image: url('./button-3.jpg');
-    background-size: 100%;
-    background-position-y: 50%; 
-}
 
 
 
@@ -109,14 +117,17 @@ button span, button div {
     height: 50px;
     width: 100px;
 }
-.header-container{
-    height: 1000px;
+/* .header-container{
+    display:none;
+    height: 100%;
     z-index: 4;
     float: right;
-    width: 375px;
+    width: 15%;
     background: #FCB043;
 }
 .header{
+    display:none;
+
     float: right;
     height: 100%;
     writing-mode: vertical-lr;
@@ -132,7 +143,7 @@ button span, button div {
     text-align: start;
     margin: 15px 0;
     padding: 0;
-    font-size: 55px;
+    font-size: 2em;
     margin-left: 85px;
 
 }
@@ -140,9 +151,9 @@ button span, button div {
     text-align: start;
     margin: 220px 0 0 10px;  
     padding:0;
-    font-size: 34px;
+    font-size: 1.5px;
 
-}
+} */
 
 
  .header h1,  .header h2, .inputs h1, .welcome .instructions h2 {
@@ -152,7 +163,11 @@ button span, button div {
  text-shadow:  0px 0px #EB4A2C, -1px 1px #EB4A2C, -2px 2px #EB4A2C, -3px 3px #EB4A2C, -4px 4px #EB4A2C, -5px 5px #EB4A2C, -6px 6px #EB4A2C, -7px 7px #EB4A2C, -8px 8px #EB4A2C, -9px 9px #64013E, -10px 10px #64013E, -11px 11px #64013E, -12px 12px #64013E, -13px 13px #64013E, -14px 14px #64013E, -15px 15px #64013E, -16px 16px #64013E;
 }
 
-.welcome {
+.welcome{
+    display: none;
+}
+
+/* .welcome {
     position: absolute;
     width: 100%;
     height: 110%; 
@@ -203,7 +218,7 @@ button span, button div {
     margin: 15px 0 ;
     padding:0;
     font-size: 55px;
-}
+} */
 
 .switch {
     margin-top: 0;
