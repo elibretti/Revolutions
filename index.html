@@ -6,24 +6,56 @@
     <title>Retro Revolutions</title>
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.12/css/all.css" integrity="sha384-G0fIWCsCzJIMAVNQPfjH08cyYaUtMwjJwqiRKxxE/rx96Uroj1BtIQ6MLJuheaO9" crossorigin="anonymous">
 
-    <link href="https://fonts.googleapis.com/css?family=Ultra" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Amatic+SC|Waiting+for+the+Sunrise" rel="stylesheet">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" type="text/css" media="screen" href="./assets/main.css" />
+    <link rel="stylesheet" type="text/css" media="screen" href="./assets/hideable.css" />
     <link rel="stylesheet" type="text/css" media="screen" href="./assets/reset.css" />
     <script src="./lib/bundle.js"></script>
     <script src="jscolor.js"></script>
 </head>
     <script>
         function handleBackground(jscolor) {
-        document.querySelector("canvas").setAttribute('style',
-        `background-color: #${jscolor}`)
+            // document.querySelector("canvas").setAttribute('style',
+            // `background-color: #${jscolor}`)
+            // document.getElementById("clear").setAttribute('style',
+            // `background-color: #${jscolor}`)
+
+            let canvas=document.querySelector("canvas");
+            let clear=document.getElementById("clear");
+            let open = document.getElementById("open-inputs")
+            let sliders = document.querySelectorAll('input:checked + .slider');
+            let backgroundPicker =document.getElementById("background-color")
+            canvas.style.backgroundColor= `#${jscolor}`;
+            clear.style.backgroundColor= `#${jscolor}`;
+            clear.style.color=  backgroundPicker.style.color;
+            open.style.color=  backgroundPicker.style.color;
+
+            for(let i=0; i < sliders.length; i++){
+                sliders[i].style.backgroundColor = `#${jscolor}`;
+                sliders[i].style.transition = `0s`;
+                sliders[i].style.webkitTransition = `0s`;
+            }
+        }
+
+        function handleSlider(name) {
+            let input = document.getElementById(name);
+            let slider = document.getElementById(`${name}-slider`);
+            let canvas=document.querySelector("canvas");
+            slider.style.transition = `0.4s`;
+            slider.style.webkitTransition = `0.4s`;
+            if(input.checked){
+                slider.style.backgroundColor = "#ccc";
+            }else {
+                slider.style.backgroundColor = canvas.style.backgroundColor;
+            }
         }
     </script>
 <body>
    <div class="welcome"> 
         <div class="header">
-                <h1>Retro</h1>
-                <h2>Revolutions</h2>
+                <h2>Welcome to</h2>
+                <h1>Revolutions</h1>
         </div>
         <div class="instructions">
                 <p> Click the canvas to </p>
@@ -31,22 +63,16 @@
                 <h2>Revolution!</h2>
         </div>
    </div>
-    <div class="inputs-container">
+    <button id="open-inputs" class="hide-button" ><i class="fas fa-sliders-h"></i></button>
+    <div class="inputs-container show" id="hideable-inputs">
     <div class="inputs">  
-        <h1> Get Groovy!</h1>
-        <label>
-            Pen Color
-        </label>
         <button
             class="jscolor {valueElement:null, value:'ffffff'}"
             style="width:50px; height:20px;"
-            id="pen-color" ></button>
-        <label>
-            Background Color
-        </label>
+            id="pen-color" > <i class="fas fa-paint-brush"></i></button>
         <button
-        class="jscolor {valueElement:null, value:'64013E', onFineChange:'handleBackground(this)'}"
-        id="background-color" ></button>                
+        class="jscolor {valueElement:null, value:'061720', onFineChange:'handleBackground(this)'}"
+        id="background-color" ><i class="fas fa-image"></i></button>                
         <label>
             Pen Size
         </label>
@@ -57,25 +83,26 @@
         <label>
             Divisions
         </label>
-            <input type = "number" id="divisions"
-                min="1" max="100" value="40" /> 
+        <input type="range" id="divisions" 
+                    min="1" max="100"
+                    value = "40"/> 
         <div class="mirror">
                 Mirror Mode 
                 <label class="switch">
                         <input type="checkbox" id="mirror">
-                        <span class="slider round"></span>
+                        <span class="slider round" onclick="handleSlider(`mirror`)" id="mirror-slider"></span>
                 </label>
         </div>
         <div class="polygon">
             Polygon Mode 
             <label class="switch">
                     <input type="checkbox" id="polygon-mode">
-                    <span class="slider round"></span>
+                    <span class="slider round" id="polygon-mode-slider" onclick="handleSlider(`polygon-mode`)"></span>
             </label>
         </div>
 
         <button id="clear">
-           <span>Clear</span>
+           Clear
         </button>
         <div class="links">
         
@@ -86,7 +113,12 @@
                 <a href="https://elibretti.github.io/" id="site">
                     <i class="fas fa-user-circle"></i>                
                 </a>
+                <a href="https://angel.co/elizabeth-libretti-1?public_profile=1" id="angellist">
+                    <i class="fab fa-angellist"></i></a>
+
         </div>
+        <button id="close-inputs" class="hide-button" ><i class="fas fa-times"></i></button>
+
     </div>
     </div>
         <div class="canvas-container" >

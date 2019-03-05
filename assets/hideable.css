@@ -1,0 +1,72 @@
+
+ .inputs h1{
+    font-size: 1.5em;
+    margin-bottom: 20px;
+}
+
+#open-inputs {
+   z-index: 1;
+   color: white;
+  transform: translateX(-100%);
+  -webkit-transform: translateX(-100%);
+  animation: slide-out 0.5s forwards;
+  -webkit-animation: slide-out 0.5s forwards;
+}  
+
+
+
+#hideable-inputs.show, #open-inputs.show{
+   animation: slide-in 0.5s forwards;
+   -webkit-animation: slide-in 0.5s forwards;
+}
+
+.hide-button{
+   border:none;
+   height: 50px;
+   min-width: 50px;
+   font-size: 30px;
+   line-height: 50px;
+   position: absolute;
+   text-align: center;
+   padding: 0;
+   margin: 5px 5px;
+   top:0;
+}
+
+.inputs-container{
+   position: absolute;
+   z-index: 4;
+   margin: 0;
+   width: 15%;
+   min-width: 210px;;
+   background: rgba(244, 245, 248, 0.521);
+   height: 100%;
+   font-size: 1em;
+   transform: translateX(-100%);
+   -webkit-transform: translateX(-100%);
+   animation: slide-out 0.5s forwards;
+   -webkit-animation: slide-out 0.5s forwards;
+}
+@keyframes slide-in {
+   100% { transform: translateX(0%); }
+}
+
+@-webkit-keyframes slide-in {
+   100% { -webkit-transform: translateX(0%); }
+}
+
+@keyframes slide-out {
+   0% { transform: translateX(0%); }
+   100% { transform: translateX(-100%); }
+}
+
+@-webkit-keyframes slide-out {
+   0% { -webkit-transform: translateX(0%); }
+   100% { -webkit-transform: translateX(-100%); }
+}
+
+.inputs #close-inputs{
+   position: absolute;
+   top:0;
+   right:0;
+}

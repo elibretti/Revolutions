@@ -1,9 +1,10 @@
+body, button {
+    font-family: 'Waiting for the Sunrise', cursive;
+}
 body{
     text-align: center;
     display: flex;
     justify-content: space-between;
-    font-family: 'Ultra', serif;
-    font-weight: 200;
     background-position: 50%;
     overflow: hidden;
     z-index: 0;
@@ -14,19 +15,20 @@ body{
 #main-canvas {
     position: absolute;
     top: 0;
-    left: 15%;
-    background-color: #64013E;
+    left: 0;
+    background-color: #061720;
 }
 
  .inputs{
     z-index: 4;
-    padding: 0px 30px;
+    padding: 60px 30px 0 30px;
     float: left;
     display: flex;
     flex-direction: column;
     align-items: center;
     height: 100%;
     background: none;
+    position: relative;
  }
 
  .inputs h1{
@@ -34,28 +36,50 @@ body{
      margin-bottom: 20px;
  }
 
-    
+#hideable-inputs.show, #open-inputs.show{
+    animation: slide-in 0.5s forwards;
+    -webkit-animation: slide-in 0.5s forwards;
+}
 
+.hide-button{
+    border:none;
+    height: 50px;
+    width:50px;
+    font-size: 50px;
+}
 
 .inputs-container{
-    z-index: 3;
+    position: absolute;
+    padding-right: 23px;
+    z-index: 4;
     margin: 0;
     width: 15%;
     min-width: 210px;;
-    background: radial-gradient(circle farthest-side, #fceabb, #f8b500);
-    background-repeat: no-repeat;
+    background: rgba(244, 245, 248, 0.521);
     height: 100%;
-    font-size: .6em;
-
+    font-size: 1em;
+    transform: translateX(-100%);
+    -webkit-transform: translateX(-100%);
+    animation: slide-out 0.5s forwards;
+    -webkit-animation: slide-out 0.5s forwards;
 }
 
+#divisions::-webkit-inner-spin-button {
+    opacity: 1;
+
+  }
+
+#divisions{
+    font-weight: 200;
+    border: none;
+    padding: 10px;
+  }
 input {
     margin-bottom: 20px;
 }
 
 .links {
     margin-top: 40px;
-    z-index: 3;
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -76,24 +100,41 @@ input {
 }
 
 #git, #site {
-    margin-left: 15px;
+    margin-left: 10px;
 }
-
+#angellist{
+    margin-left: 5px;
+}
 
 button{
     min-height: 50px;
     min-width: 100px;
-    z-index: 3;
     margin-top: 20px;
     background: none;
     border: 1px solid black;
     border-radius: 5px;
-    font-family: 'Ultra', serif;
     color: black;
     font-size: 1em;
     overflow: hidden;
+
 }
 
+button, .fa-sliders-h{
+    transition: 0.2s;
+    -webkit-transition: 0.2s;
+}
+
+button:hover, .fa-sliders-h:hover{
+    transform: scale(1.2);
+    -webkit-transform: scale(1.2);
+
+}
+
+
+#clear{
+    background-color: #061720;
+    color: white;
+}
 button span, button div {
     background: white;
     border-radius: 5px;
@@ -104,10 +145,7 @@ button span, button div {
     margin-top:20px;
 }
 
-#clear{
-    background-image: url('./button-1.jpg');
-    background-size: cover;
-}
+
 
 
 
@@ -117,63 +155,16 @@ button span, button div {
     height: 50px;
     width: 100px;
 }
-/* .header-container{
-    display:none;
-    height: 100%;
-    z-index: 4;
-    float: right;
-    width: 15%;
-    background: #FCB043;
-}
-.header{
-    display:none;
-
-    float: right;
-    height: 100%;
-    writing-mode: vertical-lr;
-    text-orientation: upright;
-    background: radial-gradient(circle farthest-side, #fceabb, #f8b500);
-    background-repeat: no-repeat;
-    padding: 30px 0 0 0;
-    width: 100%;
-    color: black;
-    margin: 0;
-}
-.header h1{
-    text-align: start;
-    margin: 15px 0;
-    padding: 0;
-    font-size: 2em;
-    margin-left: 85px;
-
-}
-.header h2{
-    text-align: start;
-    margin: 220px 0 0 10px;  
-    padding:0;
-    font-size: 1.5px;
-
-} */
 
 
- .header h1,  .header h2, .inputs h1, .welcome .instructions h2 {
- color: #F5ECCF;
- -webkit-text-stroke-width: .1px;
- -webkit-text-stroke-color: #64013E;
- text-shadow:  0px 0px #EB4A2C, -1px 1px #EB4A2C, -2px 2px #EB4A2C, -3px 3px #EB4A2C, -4px 4px #EB4A2C, -5px 5px #EB4A2C, -6px 6px #EB4A2C, -7px 7px #EB4A2C, -8px 8px #EB4A2C, -9px 9px #64013E, -10px 10px #64013E, -11px 11px #64013E, -12px 12px #64013E, -13px 13px #64013E, -14px 14px #64013E, -15px 15px #64013E, -16px 16px #64013E;
-}
 
-.welcome{
-    display: none;
-}
 
-/* .welcome {
+.welcome {
     position: absolute;
     width: 100%;
     height: 110%; 
     z-index: 20;
-    background: url('./welcome-background.jpg');
-    background-size: cover;
+    background-color:#061720;
     color: white;
     margin: 0;
     animation: fade 4s forwards;
@@ -181,27 +172,27 @@ button span, button div {
 
 }
 .welcome .header{
-    width: 400px;
-    height: 400px; 
+    height: 200px;
+    top: 200px;
+    overflow: visible;
     writing-mode: horizontal-tb;
     background:none;
     position: relative;
-    left: -34%;
-    top: 20%;
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    justify-content: center;
     animation: rotateShrink 3s, fade 3s forwards; 
     animation-delay: 1.7s;
 
 }
 .welcome .instructions{
-    width: 400px;
-    height: 400px; 
-    writing-mode: horizontal-tb;
     background:none;
     position: relative;
-    left: 37%;
-    top: 28%;
-    font-size: 32px;
-    color: #64013e;
+    left: 0%;
+    top: 0%;
+    font-size: 50px;
+    color: white;
     opacity: 0;
     animation: appear 4s; 
     animation-delay: 3s ;
@@ -210,15 +201,12 @@ button span, button div {
     text-align: center;
     margin: 15px 0 ;
     padding:0;
-    font-size: 55px;
+    font-size: 75px;
+}
+.welcome .header h2{
+    font-size: 50px;
 }
 
-.welcome .header h2{
-    text-align: center;
-    margin: 15px 0 ;
-    padding:0;
-    font-size: 55px;
-} */
 
 .switch {
     margin-top: 0;
@@ -261,7 +249,7 @@ button span, button div {
   }
   
   input:checked + .slider {
-    background-color: #64013E;
+    background-color: #061720;
   }
   
 
@@ -279,7 +267,7 @@ button span, button div {
     border-radius: 50%;
   }
 
-@keyframes rotateShrink {
+  @keyframes rotateShrink {
     from {
       -webkit-transform-origin: center;
       transform-origin: center;
