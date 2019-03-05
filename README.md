@@ -1,19 +1,18 @@
-# MandalaMagic
+# Revolutions
 
 ## Background
-Sanskrit for “circle”, mandalas are circlular symbols used as objects of devotion in Hindu and Buddhist practice. The construction of these symbols is extremely precise, with radial symmetry being of the utmost importance. This mandala generator allows for simple construction of the symbols by taking advantage of modern programming and radial symmetry. 
-The generator works by dividing a circle into a set number of regions, with a drawing in any one of these regions being replicated in the rest, creating a patterned symmetrical circle.
+This drawing application allows for simple construction of the symbols symmetrical patterns based on user inputs.
+By taking advantage of radial symmetry and mathematical principles, the application will be able to create beautiful designs with minimal effort. The generator works by dividing a circle into a set number of regions, with a drawing in any one of these regions being replicated in the rest, creating a patterned symmetrical circle.
 
 ## Functionality & MVP
- In this Mandala Magic Project users will be able to
+ In this Revolutions Project users will be able to
 * Choose the number of division on the circle
 * Choose the pen width
 * Choose the pen color
-* Be able to remove division guides
+* Choose the background color
 * Be able to clear the board
 * Be able to download the creation
 In addition, the project will include
-* An about Modal describing the origins of mandalas, and the mathematical principles behind them
 * A production README
 
 
@@ -50,7 +49,7 @@ Build out settings.js so that users can change the settings. Adapt the previous 
 Style the css and create the “About” sections make sure everything looks perfect and the game is functioning without bugs
 
 ## Bonuses
-* Create a Polygon Mode  where the mandala renders as a square not a circle
+* Create a Polygon Mode  where the pattern renders as a square not a circle
 * Create a mirror mode which reflects the image in a section down the middle of each section
 
  
