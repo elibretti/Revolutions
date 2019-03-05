@@ -33,13 +33,16 @@
    top:0;
 }
 
+
+
 .inputs-container{
    position: absolute;
+   padding-right: 23px;
    z-index: 4;
    margin: 0;
    width: 15%;
    min-width: 210px;;
-   background: rgba(244, 245, 248, 0.521);
+   background: rgba(244, 245, 248, 0.75);
    height: 100%;
    font-size: 1em;
    transform: translateX(-100%);
@@ -47,6 +50,7 @@
    animation: slide-out 0.5s forwards;
    -webkit-animation: slide-out 0.5s forwards;
 }
+
 @keyframes slide-in {
    100% { transform: translateX(0%); }
 }

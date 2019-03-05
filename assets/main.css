@@ -48,21 +48,6 @@ body{
     font-size: 50px;
 }
 
-.inputs-container{
-    position: absolute;
-    padding-right: 23px;
-    z-index: 4;
-    margin: 0;
-    width: 15%;
-    min-width: 210px;;
-    background: rgba(244, 245, 248, 0.521);
-    height: 100%;
-    font-size: 1em;
-    transform: translateX(-100%);
-    -webkit-transform: translateX(-100%);
-    animation: slide-out 0.5s forwards;
-    -webkit-animation: slide-out 0.5s forwards;
-}
 
 #divisions::-webkit-inner-spin-button {
     opacity: 1;
@@ -167,8 +152,8 @@ button span, button div {
     background-color:#061720;
     color: white;
     margin: 0;
-    animation: fade 4s forwards;
-    animation-delay: 6s;
+    animation: fade 3s forwards;
+    animation-delay: 3s;
 
 }
 .welcome .header{
@@ -182,8 +167,8 @@ button span, button div {
     flex-direction: column;
     align-content: center;
     justify-content: center;
-    animation: rotateShrink 3s, fade 3s forwards; 
-    animation-delay: 1.7s;
+    animation: rotateShrink 1s, fade 1s forwards; 
+    animation-delay: 1.5s;
 
 }
 .welcome .instructions{
@@ -194,8 +179,8 @@ button span, button div {
     font-size: 50px;
     color: white;
     opacity: 0;
-    animation: appear 4s; 
-    animation-delay: 3s ;
+    animation: appear 2s; 
+    animation-delay: 2.5s ;
 }
 .welcome .header h1{
     text-align: center;
