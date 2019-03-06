@@ -168,7 +168,7 @@ button span, button div {
     align-content: center;
     justify-content: center;
     animation: rotateShrink 1s, fade 1s forwards; 
-    animation-delay: 1.5s;
+    animation-delay: 1s;
 
 }
 .welcome .instructions{
@@ -180,7 +180,7 @@ button span, button div {
     color: white;
     opacity: 0;
     animation: appear 2s; 
-    animation-delay: 2.5s ;
+    animation-delay: 2s ;
 }
 .welcome .header h1{
     text-align: center;
@@ -262,8 +262,8 @@ button span, button div {
     to {
       -webkit-transform-origin: center;
       transform-origin: center;
-      -webkit-transform: rotate3d(0, 0, 1, 720deg) scale(0.2);
-      transform: rotate3d(0, 0, 1, 720deg) scale(0.2) ;
+      -webkit-transform: rotate3d(0, 0, 1, 500deg) scale(0.2);
+      transform: rotate3d(0, 0, 1, 500deg) scale(0.2) ;
       opacity: 0;
     }
   }
