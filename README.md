@@ -2,8 +2,8 @@
 [Live Link](https://elibretti.github.io/Revolutions/)
 
 ## Instructions
-Click the canvas to create beautiful patterns
-Change the settings by clicking the icon in the top left
+* Click the canvas to create beautiful patterns
+* Change the settings by clicking the icon in the top left
 
 ## Background
 Revolutions is a drawing application allows for simple construction of the symbols symmetrical patterns based on user inputs.
